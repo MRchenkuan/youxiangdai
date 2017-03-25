@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优享贷</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/mui.picker.css">
+    <link rel="stylesheet" href="./css/style.css?v=1">
+</head>
+<body id="homePage">
+<header class="mui-bar">
+    <img src="img/logo@2x.png">
+</header>
+
+<div class="mui-content">
+    <div class="big-banner">
+        <img src="img/main_pic_1@2x.png">
+    </div>
+    <div class="sub-banner">
+        <img src="img/main_pic_2@2x.png">
+    </div>
+    <div class="block" style="padding: 12px 15px">
+        <a onclick="openY()" class="mui-btn mui-btn-primary mui-btn-block">
+            <h4>优享贷</h4>
+            <h6>测试额度及在线申请</h6>
+        </a>
+        <a onclick="openB()" class="mui-btn mui-btn-warning mui-btn-block" style="margin-top: 20px">
+            <h4>白领贷</h4>
+            <h6>测试额度及在线申请</h6>
+        </a>
+    </div>
+</div>
+<script src="./js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack:true //启用右滑关闭功能
+    });
+    function openB() {
+        mui.openWindow({url:'./calculator.html?is=full',id:'calculator'});
+    }
+    function openY() {
+        mui.openWindow({url:'./calculator.html',id:'calculator'});
+    }
+
+</script>
+</body>
+</html>

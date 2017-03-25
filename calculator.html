@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>试算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/mui.picker.css">
+    <link rel="stylesheet" href="./css/style.css?v=1">
+</head>
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">试算</h1>
+    </header>
+    <div class="mui-content">
+        <ul class="block mui-table-view">
+            <li class="mui-table-view-cell title">工作单位</li>
+            <li class="mui-table-view-cell" style="padding: 0">
+                <ul id="company" data-company-type class="mui-table-view-radio">
+                    <li  data-value="1" class="mui-table-view-cell">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>公务员、事业单位、公立学校、公立医院</label>
+                            <input name="company" type="radio">
+                        </div>
+                    </li>
+                    <li  data-value="2" class="mui-table-view-cell">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>电信、电力、烟草、港务、其他央企</label>
+                            <input name="company" type="radio">
+                        </div>
+                    </li>
+                    <li data-value="3" class="mui-table-view-cell">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>银行</label>
+                            <input name="company" type="radio">
+                        </div>
+                    </li>
+
+                    <li data-value="4" class="mui-table-view-cell">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>其他<span class="mui-h5">（500强企业、当地知名上市公司、学校、国企、其他金融行业等）</span></label>
+                            <input name="company" type="radio">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="birthMouth" class="mui-table-view-cell">
+                <span class="fl title">出生年月</span>
+                <span class="fr mui-icon mui-icon-arrowdown"></span>
+                <span class="fr valueText"></span>
+            </li>
+        </ul>
+        <ul class="block mui-table-view">
+            <li class="mui-table-view-cell title">是否有房贷及信用卡透支</li>
+            <li class="mui-table-view-cell mui-row">
+                <ul id="houseBondage" data-hasHouseBondage class="mui-table-view-radio">
+                    <li  data-value="true" class="fl mui-table-view-cell mui-col-sm-6 mui-col-xs-6 ">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>有</label>
+                            <input name="houseBondage" type="radio">
+                        </div>
+                    </li>
+                    <li  data-value="false" class="fl mui-table-view-cell mui-col-sm-6 mui-col-xs-6 ">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>无</label>
+                            <input name="houseBondage" type="radio">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul id="otherInfo" class="block mui-table-view">
+            <li id="workDate" class="mui-table-view-cell">
+                <span class="fl title">首次参加工作的时间</span>
+                <span class="fr mui-icon mui-icon-arrowdown"></span>
+                <span class="fr valueText">请选择</span>
+            </li>
+            <li id="positionLever" data-value="1" class="mui-table-view-cell">
+                <span class="fl title">职级</span>
+                <span class="fr mui-icon mui-icon-arrowdown"></span>
+                <span class="fr valueText">普通员工</span>
+            </li>
+            <li id="marriage" data-value="1" class="mui-table-view-cell">
+                <span class="fl title">婚姻状况</span>
+                <span class="fr mui-icon mui-icon-arrowdown"></span>
+                <span class="fr valueText">未婚</span>
+            </li>
+        </ul>
+
+        <ul class="block mui-table-view">
+            <li class="mui-table-view-cell title">是否青岛籍</li>
+            <li class="mui-table-view-cell mui-row">
+                <ul id="province" data-province class="mui-table-view-radio">
+                    <li  data-value="true" class="fl mui-table-view-cell mui-col-sm-6 mui-col-xs-6 ">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>是</label>
+                            <input name="province" type="radio">
+                        </div>
+                    </li>
+                    <li  data-value="false" class="fl mui-table-view-cell mui-col-sm-6 mui-col-xs-6 ">
+                        <div class="mui-input-row mui-radio mui-left">
+                            <label>否</label>
+                            <input name="province" type="radio">
+                        </div>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+
+        <ul id="salary" class="block mui-table-view">
+            <li class="mui-table-view-cell">
+                <span class="fl title">月收入<span class="mui-h6">（税前、含公积金）</span></span>
+                <div class="mui-cus-btn-group fr">
+                    <button type="button" class="mui-cus-btn">-</button>
+                    <button type="button" class="mui-cus-btn defaultColor" data-amount="10000" style="width: 64px">10000</button>
+                    <button type="button" class="mui-cus-btn">+</button>
+                </div>
+            </li>
+        </ul>
+
+        <ul id="houseBondageFee" class="block mui-table-view">
+            <li class="mui-table-view-cell">
+                <span class="fl title">房贷月供</span>
+                <div class="mui-cus-btn-group fr">
+                    <button type="button" class="mui-cus-btn">-</button>
+                    <button type="button" class="mui-cus-btn defaultColor" data-amount="0" style="width: 64px">0</button>
+                    <button type="button" class="mui-cus-btn">+</button>
+                </div>
+            </li>
+        </ul>
+
+        <ul id="otherBondageFee" class="block mui-table-view">
+            <li class="mui-table-view-cell">
+                <span class="fl title">其他月供</span>
+                <div class="mui-cus-btn-group fr">
+                    <button type="button" class="mui-cus-btn">-</button>
+                    <button type="button" class="mui-cus-btn defaultColor" data-amount="0" style="width: 64px">0</button>
+                    <button type="button" class="mui-cus-btn">+</button>
+                </div>
+            </li>
+        </ul>
+        <div class="block" style="padding: 12px 15px">
+            <a id="openPopover" class="mui-btn mui-btn-primary mui-btn-block" onclick="doCalculate()">点击试算</a>
+        </div>
+    </div>
+    <div id="completeBox" class="mui-popover">
+        <div class="stamp">
+            <p style="text-align: center">您可申请</p>
+            <p style="text-align: center">¥ 880000</p>
+        </div>
+        <p style="text-align: center">此额度仅供参考，以实际授信为准</p>
+        <p style="text-align: center;color: #f4bf61">家庭测算可能会更高哦</p>
+        <p class="controls" style="text-align: center">
+            <a class="mui-btn-link" onclick="cancelSubmit()">暂不申请</a>
+            <button class="mui-btn-primary" onclick="doJoin()">马上申请</button>
+        </p>
+    </div>
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/mui.picker.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+.mui-btn {
+  cursor: pointer; }
+
+.mui-table-view-cell {
+  cursor: pointer; }
+
+#header {
+  background-color: #5ca3e8;
+  color: #fff; }
+  #header .mui-title {
+    color: #fff; }
+  #header .mui-icon {
+    color: #fff; }
+
+#company {
+  font-size: 16px; }
+  #company .mui-radio label {
+    padding-left: 38px; }
+  #company .mui-radio input {
+    left: 0; }
+
+.mui-table-view-cell ul {
+  padding: 0; }
+  .mui-table-view-cell ul .mui-table-view-cell {
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none; }
+    .mui-table-view-cell ul .mui-table-view-cell:after {
+      content: none; }
+
+.mui-content .title {
+  color: #666; }
+.mui-content .fl {
+  float: left; }
+.mui-content .fr {
+  float: right; }
+.mui-content .block {
+  margin-top: 15px; }
+  .mui-content .block .mui-btn h6 {
+    color: #fff;
+    font-size: .5rem; }
+    .mui-content .block .mui-btn h6:after {
+      content: ' ';
+      background-image: url(../img/but_icon_1@2x.png);
+      background-size: cover;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      margin-left: 5px; }
+.mui-content .mui-row .mui-radio {
+  clear: none;
+  text-align: center; }
+  .mui-content .mui-row .mui-radio input {
+    left: 35%; }
+.mui-content .mui-icon-arrowdown {
+  color: #666; }
+
+.mui-btn-primary {
+  background: #5ca3e8;
+  border: 1px solid #5ca3e8; }
+
+.mui-cus-btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+  .mui-cus-btn-group > .mui-cus-btn {
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    margin-left: -1px; }
+  .mui-cus-btn-group > .mui-cus-btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .mui-cus-btn-group > .mui-cus-btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .mui-cus-btn-group > .mui-cus-btn:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+
+.defaultColor {
+  color: #999999; }
+
+.activeColor {
+  color: #202020; }
+
+#completeBox {
+  background-color: #fff;
+  overflow: hidden;
+  left: 10%;
+  top: 25%;
+  width: 80%; }
+  #completeBox .stamp {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f0ad4e;
+    background-image: linear-gradient(to right top, #f0ad4e, #f7cf72);
+    border-radius: 5px;
+    color: #fff; }
+    #completeBox .stamp p {
+      color: #ffffff; }
+      #completeBox .stamp p:first-child {
+        padding: 15px 0;
+        font-size: 1.2rem;
+        border-bottom: 1px dashed #fff; }
+      #completeBox .stamp p:last-child {
+        padding: 20px 0;
+        font-size: 2.25rem; }
+  #completeBox .controls {
+    background-color: #efeff4;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden; }
+    #completeBox .controls .mui-btn-link {
+      line-height: 36px;
+      width: 50%;
+      float: left;
+      font-size: 19px;
+      color: #aaa; }
+    #completeBox .controls .mui-btn-primary {
+      float: left;
+      width: 50%;
+      height: 100%;
+      padding: 11px;
+      font-size: 18px; }
+
+.personnelForm input {
+  text-align: right; }
+.personnelForm label {
+  padding-left: 0;
+  padding-right: 0; }
+
+.mui-toast-container {
+  bottom: 33%; }
+
+#homePage .mui-bar {
+  height: 53px;
+  padding: 15px; }
+  #homePage .mui-bar img {
+    height: 100%; }
+#homePage .mui-content {
+  padding-top: 52px;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #fff, #fff, #fff, #2889da, #2889da); }
+#homePage .mui-btn-block {
+  padding: 0; }
+#homePage .big-banner img {
+  width: 100%; }
+#homePage .sub-banner {
+  text-align: center; }
+  #homePage .sub-banner img {
+    width: 80%;
+    margin: 10px auto; }
+
+/*# sourceMappingURL=style.css.map */
